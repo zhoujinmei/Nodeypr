@@ -1,0 +1,43 @@
+<!-- Create the following folder/file structure:
+/ex_8
+  |-- index.html
+index.html
+
+Copy and paste the code from the previous exercise
+Refactor the code to math the new requirements:
+Now we need to keep track of how many numbers the user input
+Once the user doesn't want to add any more numbers show the following message:
+The final result is: %result%
+The user input %numbers% numbers
+The average is: %average% -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert('This program adds all the numbers you input');
+        var nums = []
+        do{
+            var num = prompt('Please input a number');
+            if(num){
+                nums.push(Number(num))
+            }
+            var cof = confirm('Would you like to input one more number?')
+        }while(cof)
+        var result = 0
+        nums.forEach(num => result += num)
+        // console.log(nums)
+        var average = result / nums.length
+        alert(`The result so far is:${result} `);   
+        alert(`The average so far is:${average} `);   
+        alert(`The number so far is:${nums.length} `);   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
